@@ -45,6 +45,13 @@ emb = F.normalize(torch.FloatTensor(emb), p=2, dim=1).detach().cpu()
 score = torch.mean(torch.matmul(emb, emb.T)) # # tensor([[1.]]) (batch1, batch2)
 ```
 
+# Dataset
+
+Youtubeからすべて集めるのが大変なので、以下のデータも使用させていただきました。
+
+- [Laboro-ASV](https://laboro.ai/activity/column/engineer/laboro-asv/)
+- [CommonVoice](https://commonvoice.mozilla.org/ja)
+
 # Dev
 
 ```
