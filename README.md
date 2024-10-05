@@ -10,7 +10,7 @@ Youtubeなどから収集した比較的クリーンな音声データ(話者数
 
 ||EER|
 |---|---|
-|Our EcapaTDNN|9.05%|
+|**Our EcapaTDNN**|9.05%|
 |SpeechBrain EcapaTDNN|12.88%|
 |JTubeSpeech XVector|40.24%|
 
