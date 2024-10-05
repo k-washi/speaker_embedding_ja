@@ -355,8 +355,9 @@ class _SpeakerEmbeddingJa():
     def __call__(self, x: torch.Tensor) -> torch.Tensor:
         if x.ndim == 1:
             x = x.unsqueeze(0)
-        mel = self.preprocess(x)
-        return self.model(mel)
+        with torch.inference_mode():
+            mel = self.preprocess(x)
+            return self.model(mel)
 
 def SpeakerEmbeddingJa(model_path="ecapatdnn_ja_l512_st2_ep19.ckpt", hidden_size: int = 512) -> _SpeakerEmbeddingJa:
     model = _SpeakerEmbeddingJa(hidden_size=hidden_size)
