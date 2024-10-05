@@ -1,0 +1,21 @@
+[build-system]
+requires=["hatchling"]
+build-backend= "hatchling.build"
+[project]
+name="speaker_embedding_ja"
+version="0.0.1"
+description="Speaker embedding model by Japanese voice datset"
+readme="README.md"
+requires-python=">=3.8"
+
+dependencies = [
+  "numpy>=1.22.3",
+  "scipy>=1.8.0",
+  "torch>=1.10.2",
+  "torchaudio>=0.10.2",
+  "gdown>=2.3.1"
+]
+
+[tool.hatch.build.targets.xvector_jtubespeech]
+[tool.hatch.build]
+include = ["speakeremb_ja_ecapatdnn/"]
