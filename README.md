@@ -38,7 +38,7 @@ wav, sr = torchaudio.load(audio_path)
 wav = torchaudio.transforms.Resample(sr, model.sample_rate)(wav) # (batch:1, wave length)
 
 
-emb = model(wav) # -> (batch:, hidden_size)
+emb = model(wav) # -> (batch:, hidden_size:512)
 emb = F.normalize(torch.FloatTensor(emb), p=2, dim=1).detach().cpu()
 
 # embedding similarity
